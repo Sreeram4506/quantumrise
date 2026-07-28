@@ -1,0 +1,659 @@
+import { a as __toESM } from "../_runtime.mjs";
+import { o as motion } from "../_libs/framer-motion.mjs";
+import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
+import { a as RevealText, o as SectionHeading, r as MagneticButton, t as Eyebrow } from "./site-H_PIM-QR.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/master-plan-showcase-Cyspeoq9.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+var plotRowsLeft = [
+	"25",
+	"26",
+	"26",
+	"27",
+	"28",
+	"29",
+	"30",
+	"31",
+	"32",
+	"33",
+	"34*"
+];
+var plotRowsCenterLeft = [
+	"24*",
+	"23",
+	"22",
+	"22",
+	"21",
+	"20",
+	"19",
+	"17",
+	"18",
+	"15",
+	"15",
+	"14",
+	"13*"
+];
+var plotRowsCenterRight = [
+	"1*",
+	"2",
+	"3",
+	"4",
+	"5",
+	"5",
+	"6",
+	"7",
+	"8",
+	"9",
+	"10",
+	"11",
+	"12*"
+];
+var layers = [
+	{
+		id: "arrival",
+		title: "Arrival Gate",
+		body: "A formal entry axis with a secure forecourt and landscaped threshold."
+	},
+	{
+		id: "clubhouse",
+		title: "Clubhouse Edge",
+		body: "The social anchor sits to the upper left, framed by tree cover and softer planting."
+	},
+	{
+		id: "plots",
+		title: "Plot Banks",
+		body: "Two long plot bands hold the community together with a calm, efficient footprint."
+	},
+	{
+		id: "roads",
+		title: "9m Wide Roads",
+		body: "Two internal roads carry movement while preserving quiet and clear plot access."
+	}
+];
+function MasterPlanShowcase({ onPrimaryAction, primaryCtaLabel = "Download brochure", selectedCtaLabel = "Request master plan", secondaryCtaTo = "/contact", secondaryCtaLabel = "Book a site visit", showStats = true }) {
+	const [selected, setSelected] = (0, import_react.useState)("all");
+	const selectedLayer = (0, import_react.useMemo)(() => layers.find((layer) => layer.id === selected) ?? layers[0], [selected]);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+			className: "container-lux pt-24 pb-10 md:pt-32",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: "Master Plan" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(RevealText, {
+					as: "h1",
+					className: "max-w-4xl font-display text-5xl leading-[1.05] text-primary md:text-7xl",
+					children: [
+						"A plan drawn in long lines,",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
+						"with the land doing the talking."
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-6 max-w-2xl text-muted-foreground md:text-lg",
+					children: "Greenlands is laid out as a calm plotted estate: two broad internal roads, a protected clubhouse edge, and long banks of villa plots tucked into a green frame."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mt-8 flex flex-wrap gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MagneticButton, {
+						variant: "gold",
+						onClick: onPrimaryAction,
+						children: primaryCtaLabel
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MagneticButton, {
+						to: secondaryCtaTo,
+						variant: "ghost",
+						children: secondaryCtaLabel
+					})]
+				})
+			]
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			className: "container-lux pb-16",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-start",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+					initial: {
+						opacity: 0,
+						y: 20
+					},
+					animate: {
+						opacity: 1,
+						y: 0
+					},
+					transition: { duration: .7 },
+					className: "overflow-hidden rounded-[32px] border border-border bg-[linear-gradient(180deg,rgba(18,48,38,0.04),rgba(18,48,38,0.08))] p-4 shadow-[0_24px_80px_-24px_rgba(19,31,38,0.22)]",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MasterPlanDiagram, { selected })
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
+					className: "space-y-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "rounded-3xl border border-border bg-card p-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "text-[10px] uppercase tracking-[0.3em] text-muted-foreground",
+							children: "Legend"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "mt-4 space-y-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LegendButton, {
+								active: selected === "all",
+								index: "01",
+								title: "Overall plan",
+								onClick: () => setSelected("all")
+							}), layers.map((layer, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LegendButton, {
+								active: selected === layer.id,
+								index: String(i + 2).padStart(2, "0"),
+								title: layer.title,
+								onClick: () => setSelected(layer.id)
+							}, layer.id))]
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "rounded-3xl border border-border bg-primary p-6 text-primary-foreground",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-[10px] uppercase tracking-[0.3em] text-secondary",
+								children: "Selected focus"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "mt-2 font-display text-2xl text-secondary",
+								children: selected === "all" ? "Full estate" : selectedLayer.title
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-3 text-sm leading-relaxed text-primary-foreground/75",
+								children: selected === "all" ? "The full layout reads as one composed estate with a formal arrival, long plot bands and a central social anchor." : selectedLayer.body
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "mt-6 flex flex-wrap gap-3",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MagneticButton, {
+									variant: "gold",
+									onClick: onPrimaryAction,
+									children: selectedCtaLabel
+								})
+							})
+						]
+					})]
+				})]
+			})
+		}),
+		showStats && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			className: "bg-primary py-24 text-primary-foreground md:py-32",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "container-lux",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeading, {
+					eyebrow: "What it shows",
+					title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+						"The drawing is simple,",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", {
+							className: "italic text-secondary",
+							children: "and that is the point."
+						})
+					] }),
+					intro: "There are no decorative distractions here. The master plan is about legibility: where you enter, where you park, where the clubhouse sits, and how the plots are grouped.",
+					eyebrowClassName: "text-secondary",
+					titleClassName: "text-secondary"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4",
+					children: [
+						{
+							k: "Plot banks",
+							v: "34"
+						},
+						{
+							k: "Road width",
+							v: "9m"
+						},
+						{
+							k: "Estate type",
+							v: "Low density"
+						},
+						{
+							k: "View",
+							v: "Forest edge"
+						}
+					].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "text-[10px] uppercase tracking-[0.3em] text-primary-foreground/60",
+							children: item.k
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "mt-3 font-display text-3xl text-secondary",
+							children: item.v
+						})]
+					}, item.k))
+				})]
+			})
+		})
+	] });
+}
+function LegendButton({ active, index, title, onClick }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+		onClick,
+		className: `flex w-full items-center gap-3 rounded-2xl px-3 py-3 text-left transition-all ${active ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: `flex h-7 w-7 items-center justify-center rounded-full text-[10px] font-medium ${active ? "bg-secondary text-secondary-foreground" : "bg-muted text-muted-foreground"}`,
+			children: index
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: "font-display text-lg",
+			children: title
+		})]
+	});
+}
+function MasterPlanDiagram({ selected }) {
+	const plotFill = selected === "plots" || selected === "all" ? "#6e8f3d" : "#4f6a2a";
+	const roadFill = selected === "roads" || selected === "all" ? "#30363a" : "#40484d";
+	const arrivalFill = selected === "arrival" || selected === "all" ? "#d2ba73" : "#a98e52";
+	const clubhouseGlow = selected === "clubhouse" || selected === "all" ? "rgba(212, 186, 115, 0.95)" : "rgba(212, 186, 115, 0.65)";
+	const edgeTrees = Array.from({ length: 18 }, (_, i) => i);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "relative aspect-[4/5] overflow-hidden rounded-[24px] bg-[#21311f]",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			viewBox: "0 0 1200 1500",
+			className: "h-full w-full",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("defs", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("linearGradient", {
+						id: "sky",
+						x1: "0",
+						x2: "0",
+						y1: "0",
+						y2: "1",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+								offset: "0%",
+								stopColor: "#435b2f"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+								offset: "45%",
+								stopColor: "#243620"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+								offset: "100%",
+								stopColor: "#1b2b1a"
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("linearGradient", {
+						id: "grass",
+						x1: "0",
+						x2: "1",
+						y1: "0",
+						y2: "1",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+							offset: "0%",
+							stopColor: "#5f7f32"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+							offset: "100%",
+							stopColor: "#3f5f22"
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("linearGradient", {
+						id: "road",
+						x1: "0",
+						x2: "0",
+						y1: "0",
+						y2: "1",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+							offset: "0%",
+							stopColor: "#51585c"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+							offset: "100%",
+							stopColor: "#2f3437"
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("linearGradient", {
+						id: "plot",
+						x1: "0",
+						x2: "0",
+						y1: "0",
+						y2: "1",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+							offset: "0%",
+							stopColor: "#67893a"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("stop", {
+							offset: "100%",
+							stopColor: "#4e6d2b"
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("filter", {
+						id: "softShadow",
+						x: "-40%",
+						y: "-40%",
+						width: "180%",
+						height: "180%",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("feDropShadow", {
+							dx: "0",
+							dy: "18",
+							stdDeviation: "18",
+							floodColor: "#0e160d",
+							floodOpacity: "0.25"
+						})
+					})
+				] }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "0",
+					y: "0",
+					width: "1200",
+					height: "1500",
+					fill: "url(#sky)"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "28",
+					y: "28",
+					width: "1144",
+					height: "1444",
+					rx: "30",
+					fill: "url(#grass)",
+					opacity: "0.95"
+				}),
+				edgeTrees.map((i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: 70 + i * 62,
+						cy: 74,
+						r: "18",
+						fill: "#375321"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: 82 + i * 62,
+						cy: 58,
+						r: "14",
+						fill: "#496c2c"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: 60 + i * 62,
+						cy: 62,
+						r: "12",
+						fill: "#28401c"
+					})
+				] }, `tree-top-${i}`)),
+				edgeTrees.map((i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: 70 + i * 62,
+						cy: 1432,
+						r: "18",
+						fill: "#375321"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: 82 + i * 62,
+						cy: 1418,
+						r: "14",
+						fill: "#496c2c"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: 60 + i * 62,
+						cy: 1422,
+						r: "12",
+						fill: "#28401c"
+					})
+				] }, `tree-bottom-${i}`)),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "76",
+					y: "148",
+					width: "220",
+					height: "186",
+					rx: "10",
+					fill: "#cbb78b",
+					filter: "url(#softShadow)"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "86",
+					y: "158",
+					width: "200",
+					height: "166",
+					rx: "8",
+					fill: "#f4f0df",
+					opacity: "0.12"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+					x: "186",
+					y: "250",
+					textAnchor: "middle",
+					fill: "#f7f0d2",
+					fontSize: "28",
+					fontWeight: "600",
+					letterSpacing: "2",
+					children: "CLUBHOUSE"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+					x: "186",
+					y: "286",
+					textAnchor: "middle",
+					fill: "#f7f0d2",
+					fontSize: "14",
+					letterSpacing: "4",
+					children: "SOCIAL ANCHOR"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "308",
+					y: "0",
+					width: "112",
+					height: "1500",
+					fill: "url(#road)",
+					opacity: "0.95"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "704",
+					y: "0",
+					width: "112",
+					height: "1500",
+					fill: "url(#road)",
+					opacity: "0.95"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "420",
+					y: "0",
+					width: "284",
+					height: "1500",
+					fill: "rgba(0,0,0,0)"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "0",
+					y: "1220",
+					width: "1200",
+					height: "120",
+					fill: "rgba(16, 29, 14, 0.35)"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "0",
+					y: "1308",
+					width: "1200",
+					height: "40",
+					fill: "rgba(31, 45, 21, 0.55)"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "82",
+					y: "1348",
+					width: "1036",
+					height: "48",
+					rx: "6",
+					fill: "#4b4f47"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "510",
+					y: "1288",
+					width: "180",
+					height: "92",
+					rx: "8",
+					fill: "#d6c28a",
+					filter: "url(#softShadow)"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+					x: "600",
+					y: "1344",
+					textAnchor: "middle",
+					fill: "#3a321a",
+					fontSize: "24",
+					fontWeight: "700",
+					letterSpacing: "4",
+					children: "ENTRY GATE"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+					x: "364",
+					y: "770",
+					transform: "rotate(-90 364 770)",
+					fill: "#e7dfc9",
+					fontSize: "26",
+					fontWeight: "700",
+					letterSpacing: "3",
+					children: "9M WIDE ROAD"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+					x: "760",
+					y: "770",
+					transform: "rotate(-90 760 770)",
+					fill: "#e7dfc9",
+					fontSize: "26",
+					fontWeight: "700",
+					letterSpacing: "3",
+					children: "9M WIDE ROAD"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					opacity: selected === "roads" || selected === "all" ? .9 : .45,
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+						x: "308",
+						y: "0",
+						width: "4",
+						height: "1500",
+						fill: roadFill,
+						opacity: "0.8"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+						x: "816",
+						y: "0",
+						width: "4",
+						height: "1500",
+						fill: roadFill,
+						opacity: "0.8"
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("g", { children: plotRowsLeft.map((label, index) => {
+					const y = 360 + index * 85;
+					const h = index === plotRowsLeft.length - 1 ? 94 : 84;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+						opacity: selected === "plots" || selected === "all" ? 1 : .65,
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+							x: "70",
+							y,
+							width: "220",
+							height: h,
+							fill: plotFill,
+							stroke: "rgba(255,255,255,0.28)",
+							strokeWidth: "2"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+							x: "180",
+							y: y + h / 2 + 10,
+							textAnchor: "middle",
+							fill: "#f6f1dd",
+							fontSize: "26",
+							fontWeight: "700",
+							children: label
+						})]
+					}, `left-${label}-${index}`);
+				}) }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("g", { children: plotRowsCenterLeft.map((label, index) => {
+					const y = 230 + index * 90;
+					const h = index === plotRowsCenterLeft.length - 1 ? 96 : 88;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+						opacity: selected === "plots" || selected === "all" ? 1 : .65,
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+							x: "420",
+							y,
+							width: "140",
+							height: h,
+							fill: "url(#plot)",
+							stroke: "rgba(255,255,255,0.28)",
+							strokeWidth: "2"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+							x: "490",
+							y: y + h / 2 + 9,
+							textAnchor: "middle",
+							fill: "#f6f1dd",
+							fontSize: "24",
+							fontWeight: "700",
+							children: label
+						})]
+					}, `center-left-${label}-${index}`);
+				}) }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("g", { children: plotRowsCenterRight.map((label, index) => {
+					const y = 230 + index * 90;
+					const h = index === plotRowsCenterRight.length - 1 ? 96 : 88;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+						opacity: selected === "plots" || selected === "all" ? 1 : .65,
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+							x: "560",
+							y,
+							width: "144",
+							height: h,
+							fill: "url(#plot)",
+							stroke: "rgba(255,255,255,0.28)",
+							strokeWidth: "2"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
+							x: "632",
+							y: y + h / 2 + 9,
+							textAnchor: "middle",
+							fill: "#f6f1dd",
+							fontSize: "24",
+							fontWeight: "700",
+							children: label
+						})]
+					}, `center-right-${label}-${index}`);
+				}) }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					opacity: selected === "arrival" || selected === "all" ? 1 : .45,
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+							x: "505",
+							y: "1288",
+							width: "190",
+							height: "92",
+							rx: "8",
+							fill: arrivalFill,
+							opacity: "0.45"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+							cx: "510",
+							cy: "1334",
+							r: "6",
+							fill: "#f7efd4"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+							cx: "690",
+							cy: "1334",
+							r: "6",
+							fill: "#f7efd4"
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+					opacity: selected === "clubhouse" || selected === "all" ? 1 : .55,
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+							cx: "128",
+							cy: "134",
+							r: "18",
+							fill: clubhouseGlow
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+							cx: "214",
+							cy: "138",
+							r: "14",
+							fill: clubhouseGlow
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+							cx: "172",
+							cy: "100",
+							r: "16",
+							fill: clubhouseGlow
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("g", {
+					opacity: selected === "all" ? 1 : .9,
+					children: Array.from({ length: 20 }, (_, i) => i).map((i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: 330 + i * 42,
+						cy: 1390,
+						r: "3.5",
+						fill: "#f8e8a6",
+						opacity: "0.8"
+					}, `lamp-${i}`))
+				})
+			]
+		})
+	});
+}
+//#endregion
+export { MasterPlanShowcase as t };

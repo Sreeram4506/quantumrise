@@ -1,0 +1,75 @@
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { a as RevealText, r as MagneticButton, t as Eyebrow } from "./site-H_PIM-QR.mjs";
+import { t as Route } from "./blog._slug-gePAJRNy.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/blog._slug-CGOBYJl7.js
+var import_jsx_runtime = require_jsx_runtime();
+function BlogPost() {
+	const { post } = Route.useLoaderData();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+			className: "container-lux pt-24 md:pt-32",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+					to: "/blog",
+					className: "text-xs uppercase tracking-[0.28em] text-muted-foreground hover:text-primary",
+					children: "← Journal"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eyebrow, { children: post.tag }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RevealText, {
+					as: "h1",
+					className: "max-w-4xl font-display text-4xl leading-[1.1] text-primary md:text-6xl",
+					children: post.title
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mt-6 flex gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: new Date(post.date).toLocaleDateString("en-IN", {
+							day: "numeric",
+							month: "long",
+							year: "numeric"
+						}) }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "·" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [post.read, " read"] })
+					]
+				})
+			]
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			className: "container-lux py-12",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+				src: post.cover,
+				alt: "",
+				className: "w-full rounded-3xl object-cover",
+				loading: "lazy"
+			})
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+			className: "container-lux pb-24",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
+				className: "mx-auto max-w-2xl space-y-6 text-lg leading-relaxed text-foreground/85",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-display text-2xl leading-snug text-primary",
+						children: post.excerpt
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "North Bangalore's land story used to be a single sentence: airport in, prices up. In 2026 the sentence is longer, more nuanced, and — for the disciplined buyer — much more interesting." }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "What has changed in the last thirty-six months is not the airport. It's the density of everything the airport has attracted around it. A second aerospace SEZ, a Prestige office corridor, an international school belt, a hospital cluster, and the confirmed alignment of the Peripheral Ring Road that connects the corridor to Whitefield in twenty-eight minutes." }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The implication for a plotted community like Greenlands is quiet but material. Absorption in low-density villa plots historically lags apartments by four to six quarters. In corridors going through infrastructure repricing, the lag compresses. Plots that transacted at ₹6,500 per square foot in early 2024 are now moving at ₹8,200 without any change to the physical asset." }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "What we look for in a plotted community is unglamorous. Freehold title, transparent conveyance, a master plan filed with RERA, actual physical work on the ground during marketing, and — the most underrated indicator — a landscape architect on retainer. Landscape is the only amenity that improves with time; every other amenity begins depreciating on the day it's delivered." }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The reasons to be sceptical are the usual ones. Corridors take longer than the deck suggests. Approvals slip. The market for plots above ₹3 crore is thinner than the market for apartments at the same price. But even in the pessimistic scenario, the downside on a well-approved plot in this corridor is bounded by land value, which does not depreciate." }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "That's the honest thesis. We're happy to walk you through where it might be wrong." })
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "mt-16 flex justify-center",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MagneticButton, {
+					to: "/contact",
+					variant: "gold",
+					children: "Book a private tour"
+				})
+			})]
+		})
+	] });
+}
+//#endregion
+export { BlogPost as component };
