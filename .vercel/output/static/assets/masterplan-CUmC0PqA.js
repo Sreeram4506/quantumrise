@@ -1,1 +1,0 @@
-var e=`/assets/masterplan-23WDnVkJ.jpg`;export{e as t};

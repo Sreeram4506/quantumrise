@@ -1,1 +1,0 @@
-import{s as e,t}from"./link-BroVZncT.js";var n=e(),r=()=>(0,n.jsxs)(`div`,{className:`container-lux py-40 text-center`,children:[(0,n.jsx)(`h1`,{className:`font-display text-4xl text-primary`,children:`Post not found.`}),(0,n.jsx)(t,{to:`/blog`,className:`mt-6 inline-block text-primary underline`,children:`Back to journal`})]});export{r as notFoundComponent};
