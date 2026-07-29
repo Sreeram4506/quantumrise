@@ -95,7 +95,7 @@ function Hero() {
     <section ref={ref} className="relative -mt-16 h-[100svh] min-h-[640px] overflow-hidden md:-mt-20">
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <img
-          src={hero}
+          src="/Background.png"
           alt=""
           className="h-full w-full object-cover"
           fetchPriority="high"

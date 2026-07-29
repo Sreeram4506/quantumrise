@@ -158,9 +158,14 @@ export function Nav() {
               alt="Quantum Rise Logo"
               className="h-9 w-auto md:h-11 object-contain transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="font-display text-2xl md:text-[26px] tracking-tight flex items-center">
-              <span className="text-[#0d2757] dark:text-[#3b82f6] font-bold">Quantum</span>
-              <span className="text-[#c8a85d] font-bold ml-0.5">Rise</span>
+            <span className="font-display flex flex-col leading-none tracking-tight">
+              <span className="flex items-center text-2xl md:text-[26px]">
+                <span className="text-[#0d2757] dark:text-[#3b82f6] font-extrabold">Quantum</span>
+                <span className="text-[#c8a85d] font-extrabold ml-0.5">Rise</span>
+              </span>
+              <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-foreground/70">
+                Rise Together
+              </span>
             </span>
           </Link>
 
@@ -231,9 +236,14 @@ export function Nav() {
             <div className="container-lux flex h-full flex-col justify-between pt-24 pb-16">
               <div className="flex items-center gap-3 mb-4 pb-4 border-b border-primary-foreground/10">
                 <img src="/logo.png" alt="Quantum Rise Logo" className="h-10 w-auto bg-white/95 rounded p-1 object-contain" />
-                <span className="font-display text-2xl tracking-tight flex items-center">
-                  <span className="text-[#0d2757] dark:text-[#3b82f6] font-bold">Quantum</span>
-                  <span className="text-[#c8a85d] font-bold ml-0.5">Rise</span>
+                <span className="font-display flex flex-col leading-none tracking-tight">
+                  <span className="flex items-center text-2xl">
+                    <span className="text-[#0d2757] dark:text-[#3b82f6] font-extrabold">Quantum</span>
+                    <span className="text-[#c8a85d] font-extrabold ml-0.5">Rise</span>
+                  </span>
+                  <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-primary-foreground/80">
+                    Rise Together
+                  </span>
                 </span>
               </div>
               <nav className="flex flex-col gap-1">
