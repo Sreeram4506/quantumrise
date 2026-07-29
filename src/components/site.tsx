@@ -163,7 +163,7 @@ export function Nav() {
                 <span className="text-[#0d2757] dark:text-[#3b82f6] font-extrabold">Quantum</span>
                 <span className="text-[#c8a85d] font-extrabold ml-0.5">Rise</span>
               </span>
-              <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-foreground/70">
+              <span className="mt-1 text-[11px] font-extrabold uppercase tracking-[0.3em] text-foreground/75">
                 Rise Together
               </span>
             </span>
@@ -241,7 +241,7 @@ export function Nav() {
                     <span className="text-[#0d2757] dark:text-[#3b82f6] font-extrabold">Quantum</span>
                     <span className="text-[#c8a85d] font-extrabold ml-0.5">Rise</span>
                   </span>
-                  <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-primary-foreground/80">
+                  <span className="mt-1 text-[11px] font-extrabold uppercase tracking-[0.3em] text-primary-foreground/85">
                     Rise Together
                   </span>
                 </span>
