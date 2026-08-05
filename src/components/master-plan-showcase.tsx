@@ -65,8 +65,8 @@ export function MasterPlanShowcase({
           with the land doing the talking.
         </RevealText>
         <p className="mt-6 max-w-2xl text-muted-foreground md:text-lg">
-          Greenlands is laid out as a calm plotted estate: two broad internal roads, a protected clubhouse edge,
-          and long banks of villa plots tucked into a green frame.
+        Green Gardens is laid out as a calm plotted estate: two broad internal roads, a protected clubhouse edge,
+        and long banks of villa plots tucked into a green frame.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <MagneticButton variant="gold" onClick={onPrimaryAction}>

@@ -57,6 +57,7 @@ function Home() {
     <>
       <Hero />
       <StoryStrip />
+      <CompanySection />
       <WhyUs />
       <ProjectsTeaser openEnquiry={openEnquiry} />
       <MasterPlanShowcase
@@ -160,7 +161,7 @@ function StoryStrip() {
         <span className="hidden md:inline">RERA · PRM/KA/RERA/1251/446</span>
         <span>Studio Yardstick · Landscape</span>
         <span className="hidden md:inline">Technogym · Wellness</span>
-        <span>Possession · Q4 2027</span>
+        <span>Ready for construction</span>
       </div>
     </section>
   );
@@ -175,7 +176,7 @@ function About() {
         <div>
           <Parallax offset={60}>
             <div className="relative overflow-hidden rounded-3xl">
-          <img src={interior} alt="A villa interior at Greenlands" className="aspect-[4/5] w-full object-cover" loading="lazy" width={1400} height={1000} />
+          <img src={interior} alt="A villa interior at Green Gardens" className="aspect-[4/5] w-full object-cover" loading="lazy" width={1400} height={1000} />
             </div>
           </Parallax>
         </div>
@@ -183,7 +184,7 @@ function About() {
           <SectionHeading
             eyebrow="The estate"
             title={<>Land as the last<br /><em className="italic text-secondary">luxury.</em></>}
-            intro="Greenlands is our most considered work — a low-density plotted community drawn around what already exists. Existing tree lines are protected. Water follows the natural fall. The clubhouse is placed where the site's best long-view happens to be."
+            intro="Green Gardens is our most considered work — a low-density plotted community drawn around what already exists. Existing tree lines are protected. Water follows the natural fall. The clubhouse is placed where the site's best long-view happens to be."
           />
           <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((s) => (
@@ -201,12 +202,41 @@ function About() {
 
 /* -------------------------------------------------------------------------- */
 
+function CompanySection() {
+  return (
+    <section className="container-lux py-28 md:py-40">
+      <div className="grid gap-16 md:grid-cols-2 md:items-center">
+        <div>
+          <Parallax offset={60}>
+            <div className="relative overflow-hidden rounded-3xl">
+              <img src={aerial} alt="Aerial view of the Green Gardens estate" className="aspect-[4/5] w-full object-cover" loading="lazy" width={1400} height={1000} />
+            </div>
+          </Parallax>
+        </div>
+        <div>
+          <SectionHeading
+            eyebrow="About the company"
+            title={<>A developer built on<br /><em className="italic text-secondary">quiet conviction.</em></>}
+            intro="Quantum Rise Infra crafts low-density, amenity-rich plotted communities across South India. We believe land should be treated with restraint — protected tree lines, honest master plans and infrastructure that outlasts trends."
+          />
+          <div className="mt-10 flex flex-wrap gap-3">
+            <MagneticButton to="/about" variant="gold">Our story</MagneticButton>
+            <MagneticButton to="/project" variant="ghost">Explore projects</MagneticButton>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+
 function WhyUs() {
   return (
     <section className="bg-primary py-28 text-primary-foreground md:py-40">
       <div className="container-lux">
         <SectionHeading
-          eyebrow="Why Greenlands"
+          eyebrow="Why Green Gardens"
           title={<>Six reasons this address will<br /><em className="italic text-secondary">age well.</em></>}
           eyebrowClassName="text-secondary"
           titleClassName="text-secondary"
@@ -242,7 +272,7 @@ function WhyUs() {
 function ProjectsTeaser({ openEnquiry }: { openEnquiry: (context: string) => void }) {
   const projects = [
     {
-      title: "Greenlands",
+      title: "Green Garden",
       tag: "Flagship Estate",
       description: "A 2-acre plotted layout with 46,000 sq.ft of area, MPA approval, and no clubhouse planned.",
       image: "/greenlands.jpeg",

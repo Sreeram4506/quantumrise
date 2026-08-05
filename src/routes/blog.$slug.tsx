@@ -69,7 +69,7 @@ function BlogPost() {
             What has changed in the last thirty-six months is not the airport. It's the density of everything the airport has attracted around it. A second aerospace SEZ, a Prestige office corridor, an international school belt, a hospital cluster, and the confirmed alignment of the Peripheral Ring Road that connects the corridor to Whitefield in twenty-eight minutes.
           </p>
           <p>
-            The implication for a plotted community like Greenlands is quiet but material. Absorption in low-density villa plots historically lags apartments by four to six quarters. In corridors going through infrastructure repricing, the lag compresses. Plots that transacted at ₹6,500 per square foot in early 2024 are now moving at ₹8,200 without any change to the physical asset.
+            The implication for a plotted community like Green Gardens is quiet but material. Absorption in low-density villa plots historically lags apartments by four to six quarters. In corridors going through infrastructure repricing, the lag compresses. Plots that transacted at ₹6,500 per square foot in early 2024 are now moving at ₹8,200 without any change to the physical asset.
           </p>
           <p>
             What we look for in a plotted community is unglamorous. Freehold title, transparent conveyance, a master plan filed with RERA, actual physical work on the ground during marketing, and — the most underrated indicator — a landscape architect on retainer. Landscape is the only amenity that improves with time; every other amenity begins depreciating on the day it's delivered.

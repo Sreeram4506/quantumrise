@@ -6,13 +6,13 @@ import { MasterPlanShowcase } from "@/components/master-plan-showcase";
 export const Route = createFileRoute("/master-plan")({
   head: () => ({
     meta: [
-      { title: "Greenlands Master Plan" },
+      { title: "Green Gardens Master Plan" },
       {
         name: "description",
         content:
-          "Explore the Greenlands master plan with plotted banks, 9m roads, the clubhouse edge and a secure arrival sequence.",
+          "Explore the Green Gardens master plan with plotted banks, 9m roads, the clubhouse edge and a secure arrival sequence.",
       },
-      { property: "og:title", content: "Greenlands Master Plan" },
+      { property: "og:title", content: "Green Gardens Master Plan" },
     ],
     links: [{ rel: "canonical", href: "/master-plan" }],
   }),

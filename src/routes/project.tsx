@@ -10,9 +10,9 @@ import { nearby } from "@/lib/site-data";
 export const Route = createFileRoute("/project")({
   head: () => ({
     meta: [
-      { title: "Greenlands — Project Overview" },
-      { name: "description", content: "Explore Greenlands, a premium plotted villa community in North Bangalore." },
-      { property: "og:title", content: "Greenlands — Project Overview" },
+      { title: "Green Gardens — Project Overview" },
+      { name: "description", content: "Explore Green Gardens, a premium plotted villa community in North Bangalore." },
+      { property: "og:title", content: "Green Gardens — Project Overview" },
       { property: "og:image", content: aerial },
     ],
     links: [{ rel: "canonical", href: "/project" }],
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/project")({
 });
 
 const specs = [
-  { k: "Project", v: "Greenlands" },
+  { k: "Project", v: "Green Gardens" },
   { k: "Developer", v: "Quantumrise Infra" },
   { k: "Type", v: "Plotted villa community" },
   { k: "Setting", v: "Low-density residential" },
@@ -48,12 +48,12 @@ function Project() {
         <img src={aerial} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-primary/80" />
         <div className="container-lux relative z-10 flex h-full flex-col justify-end pb-16 text-primary-foreground">
-          <Eyebrow>Greenlands</Eyebrow>
+          <Eyebrow className="text-secondary">Green Gardens</Eyebrow>
           <RevealText as="h1" className="max-w-3xl font-display text-5xl leading-[1.05] md:text-7xl">
             A greener address, planned for everyday calm.
           </RevealText>
           <div className="mt-8">
-            <MagneticButton variant="gold" onClick={() => openEnquiry("Greenlands")}>
+            <MagneticButton variant="gold" onClick={() => openEnquiry("Green Gardens")}>
               Enquire now
             </MagneticButton>
           </div>
@@ -64,8 +64,8 @@ function Project() {
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <SectionHeading
             eyebrow="Walkthrough"
-            title={<>See Greenlands<br /><em className="italic text-secondary">in motion.</em></>}
-            intro="This walkthrough gives a quick sense of the site, the setting and the overall Greenlands experience before you visit in person."
+            title={<>See Green Gardens<br /><em className="italic text-secondary">in motion.</em></>}
+            intro="This walkthrough gives a quick sense of the site, the setting and the overall Green Gardens experience before you visit in person."
           />
           <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-[0_18px_60px_rgba(19,31,38,0.12)]">
             <video
@@ -85,8 +85,9 @@ function Project() {
         <div className="grid gap-12 md:grid-cols-[1fr_1.2fr]">
           <SectionHeading
             eyebrow="Project profile"
-            title={<>Greenlands at<br /><em className="italic text-secondary">a glance.</em></>}
-            intro="Greenlands is our flagship plotted residential community with a quieter planning language: usable land, clear internal movement and pockets of green space around daily life."
+            eyebrowClassName="text-secondary"
+            title={<>Green Gardens at<br /><em className="italic text-secondary">a glance.</em></>}
+            intro="Green Gardens is our flagship plotted residential community with a quieter planning language: usable land, clear internal movement and pockets of green space around daily life."
           />
           <div className="grid grid-cols-1 divide-y divide-border rounded-3xl border border-border bg-card">
             {specs.map((s) => (
@@ -98,7 +99,7 @@ function Project() {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <MagneticButton variant="gold" onClick={() => openEnquiry("Greenlands — Project Profile")}>
+          <MagneticButton variant="gold" onClick={() => openEnquiry("Green Gardens — Project Profile")}>
             Get pricing & availability
           </MagneticButton>
         </div>
@@ -108,8 +109,9 @@ function Project() {
         <div className="container-lux grid gap-14 md:grid-cols-2 md:items-center">
           <SectionHeading
             eyebrow="Planning intent"
+            eyebrowClassName="text-secondary"
             title={<>Green space that<br /><em className="italic text-secondary">feels usable.</em></>}
-            intro="Greenlands focuses on the essentials buyers look for first: a clear residential layout, comfortable streets and a landscape-led setting."
+            intro="Green Gardens focuses on the essentials buyers look for first: a clear residential layout, comfortable streets and a landscape-led setting."
           />
           <Parallax offset={60}>
             <img src={landscape} alt="" loading="lazy" className="aspect-[4/5] rounded-3xl object-cover" />
@@ -124,10 +126,10 @@ function Project() {
             <SectionHeading
               eyebrow="The plots"
               title={<>Land for a<br /><em className="italic text-secondary">future home.</em></>}
-              intro="Each plot at Greenlands is designed for your future home — with clear titles, underground utilities and a community design charter that protects your investment."
+              intro="Each plot at Green Gardens is designed for your future home — with clear titles, underground utilities and a community design charter that protects your investment."
             />
             <div className="mt-8">
-              <MagneticButton variant="primary" onClick={() => openEnquiry("Greenlands — Plots")}>
+              <MagneticButton variant="primary" onClick={() => openEnquiry("Green Gardens — Plots")}>
                 Check plot availability
               </MagneticButton>
             </div>
@@ -143,27 +145,27 @@ function Project() {
             intro="The map gives buyers a quick sense of the project setting, while the nearby list keeps daily conveniences, work hubs and leisure points easy to scan."
           />
           <div className="mt-6">
-            <MagneticButton variant="gold" onClick={() => openEnquiry("Greenlands — Location")}>
+            <MagneticButton variant="gold" onClick={() => openEnquiry("Green Gardens — Location")}>
               Enquire about this location
             </MagneticButton>
           </div>
         </div>
-        <div className="grid gap-8 lg:grid-cols-[1.35fr_1fr]">
-          <div className="overflow-hidden rounded-3xl border border-border bg-primary/5">
+        <div className="grid gap-8 lg:grid-cols-[1.35fr_1fr] lg:items-start">
+          <div className="self-start overflow-hidden rounded-3xl border border-border bg-primary/5">
             <iframe
-              title="Greenlands location map"
+              title="Site No:17/1, Neelanka Agrahara, Malur, Kolar Dt, Karnataka-563130 map"
               width="100%"
               height="560"
               loading="lazy"
               className="block h-[420px] w-full md:h-[560px]"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=77.85%2C12.93%2C78.02%2C13.08&layer=mapnik"
+              src="https://www.google.com/maps?q=Site+No%3A17%2F1%2C+Neelanka+Agrahara%2C+Malur%2C+Kolar+Dt%2C+Karnataka-563130&output=embed"
             />
           </div>
           <div className="grid content-start gap-3">
             {nearby.map((item) => (
               <button
                 key={item.name}
-                onClick={() => openEnquiry(`Greenlands — ${item.name} (${item.category})`)}
+                onClick={() => openEnquiry(`Green Gardens — ${item.name} (${item.category})`)}
                 className="flex w-full items-center justify-between gap-4 rounded-2xl border border-border bg-card p-5 text-left transition-all hover:border-secondary/40 hover:shadow-md"
               >
                 <div>
@@ -184,7 +186,7 @@ function Project() {
       <EnquiryModal
         open={enquiryOpen}
         onClose={() => setEnquiryOpen(false)}
-        title="Interested in Greenlands?"
+        title="Interested in Green Gardens?"
         context={enquiryContext}
       />
     </>

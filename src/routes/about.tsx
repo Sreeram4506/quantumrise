@@ -1,8 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion } from "framer-motion";
-import { Eyebrow, MagneticButton, RevealText, SectionHeading, StatCounter } from "@/components/site";
-import { stats, timeline } from "@/lib/site-data";
-import landscape from "@/assets/landscape.jpg";
+import { Eyebrow, MagneticButton, RevealText, SectionHeading } from "@/components/site";
 import interior from "@/assets/interior.jpg";
 
 export const Route = createFileRoute("/about")({
@@ -33,49 +30,6 @@ function About() {
             southern states — always plotted, always low-density, always finished before we sell the next.
             Quantumrise Infra is our flagship community.
           </p>
-        </div>
-      </section>
-
-      <section className="container-lux py-24">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
-          {stats.map((s) => (
-            <StatCounter key={s.label} {...s} />
-          ))}
-        </div>
-      </section>
-
-      <section className="container-lux py-24">
-        <div className="grid gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
-          <SectionHeading
-            eyebrow="Studio"
-            title={<>A house style that<br /><em className="italic text-secondary">refuses trend.</em></>}
-            intro="Our work is designed to look correct in 2045 — not just correct in 2025. We work with a small circle of landscape and interior collaborators. We turn down two out of every three land opportunities."
-          />
-          <div className="relative">
-            <img src={landscape} alt="" loading="lazy" className="aspect-[4/5] w-full rounded-3xl object-cover" />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-primary py-24 text-primary-foreground md:py-32">
-        <div className="container-lux">
-          <SectionHeading eyebrow="Timeline" title={<>Thirteen quiet years.</>} />
-          <div className="mt-16 space-y-2">
-            {timeline.map((t, i) => (
-              <motion.div
-                key={t.year}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7, delay: i * 0.08 }}
-                className="grid gap-4 border-b border-primary-foreground/10 py-8 md:grid-cols-[120px_1fr_2fr] md:items-baseline"
-              >
-                <div className="font-display text-3xl text-secondary">{t.year}</div>
-                <div className="font-display text-xl">{t.title}</div>
-                <div className="text-sm text-primary-foreground/70">{t.body}</div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
