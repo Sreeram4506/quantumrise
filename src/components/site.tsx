@@ -65,7 +65,7 @@ export function LoadingScreen({ children }: { children: ReactNode }) {
               transition={{ delay: 0.2, duration: 0.7 }}
               className="font-display text-4xl tracking-tight"
             >
-              <span className="gold-shimmer">Quantumrise Infra</span>
+              <span className="gold-shimmer">Greenlands by Quantumrise Infra</span>
             </motion.div>
             <div className="mt-8 h-px w-56 overflow-hidden bg-primary-foreground/15">
               <motion.div
