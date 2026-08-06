@@ -176,7 +176,7 @@ function About() {
         <div>
           <Parallax offset={60}>
             <div className="relative overflow-hidden rounded-3xl">
-          <img src={interior} alt="A villa interior at Green Gardens" className="aspect-[4/5] w-full object-cover" loading="lazy" width={1400} height={1000} />
+          <img src={interior} alt="A villa interior at Greenlands" className="aspect-[4/5] w-full object-cover" loading="lazy" width={1400} height={1000} />
             </div>
           </Parallax>
         </div>
@@ -184,7 +184,7 @@ function About() {
           <SectionHeading
             eyebrow="The estate"
             title={<>Land as the last<br /><em className="italic text-secondary">luxury.</em></>}
-            intro="Green Gardens is our most considered work — a low-density plotted community drawn around what already exists. Existing tree lines are protected. Water follows the natural fall. The clubhouse is placed where the site's best long-view happens to be."
+            intro="Greenlands is our most considered work — a low-density plotted community drawn around what already exists. Existing tree lines are protected. Water follows the natural fall. The clubhouse is placed where the site's best long-view happens to be."
           />
           <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((s) => (
@@ -236,7 +236,7 @@ function WhyUs() {
     <section className="bg-primary py-28 text-primary-foreground md:py-40">
       <div className="container-lux">
         <SectionHeading
-          eyebrow="Why Green Gardens"
+          eyebrow="Why Greenlands"
           title={<>Six reasons this address will<br /><em className="italic text-secondary">age well.</em></>}
           eyebrowClassName="text-secondary"
           titleClassName="text-secondary"
@@ -272,7 +272,7 @@ function WhyUs() {
 function ProjectsTeaser({ openEnquiry }: { openEnquiry: (context: string) => void }) {
   const projects = [
     {
-      title: "Green Garden",
+      title: "Greenlands",
       tag: "Flagship Estate",
       description: "A 2-acre plotted layout with 46,000 sq.ft of area, MPA approval, and no clubhouse planned.",
       image: "/greenlands.jpeg",
