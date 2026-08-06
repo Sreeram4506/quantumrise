@@ -297,11 +297,16 @@ export function Footer() {
       <div className="container-lux py-20">
         <div className="grid gap-16 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3 font-display text-3xl md:text-4xl">
+            <div className="flex items-center gap-3">
               <img src="/logo.png" alt="Quantum Rise Logo" className="h-10 w-auto md:h-12 bg-white/95 rounded-md p-1 object-contain" />
-              <span className="flex items-center tracking-tight">
-                <span className="text-[#0d2757] font-bold">Quantum</span>
-                <span className="ml-0.5 text-[#c8a85d] font-bold">Rise</span>
+              <span className="font-display flex flex-col leading-none tracking-tight">
+                <span className="flex items-center text-2xl md:text-[26px]">
+                  <span className="text-[#0d2757] dark:text-[#3b82f6] font-extrabold">Quantum</span>
+                  <span className="ml-0.5 text-[#c8a85d] font-extrabold">Rise</span>
+                </span>
+                <span className="mt-1 text-[11px] font-extrabold uppercase tracking-[0.3em] text-primary-foreground/85">
+                  Rise Together
+                </span>
               </span>
             </div>
           </div>
