@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { blogPosts } from "@/lib/site-data";
 
-const BASE_URL = ""; // TODO: set when a domain is assigned.
+const BASE_URL = "https://www.quantumriseinfra.com";
 
 interface Entry {
   path: string;
