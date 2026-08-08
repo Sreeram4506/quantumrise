@@ -63,7 +63,7 @@ export function LoadingScreen({ children }: { children: ReactNode }) {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.7 }}
-              className="font-display text-4xl tracking-tight"
+              className="font-display text-center text-4xl tracking-tight"
             >
               <span className="gold-shimmer">Greenlands by Quantumrise Infra</span>
             </motion.div>

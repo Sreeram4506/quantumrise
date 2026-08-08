@@ -75,6 +75,14 @@ export const galleryImages = [
   { src: "/WhatsApp%20Image%202026-07-20%20at%202.30.38%20PM%20(1).jpeg", alt: "Gallery photo 9", category: "Gallery", height: 680 },
 ];
 
+export const managingDirector = {
+  name: "Vishnu Vardhan Boilla",
+  role: "Managing Director",
+  photo: "/md-placeholder.jpg",
+  bio: "Leading Quantumrise Infra with a vision for considered, low-density plotted communities across South India — land developed with restraint, honesty and a view to the next generation.",
+  quote: "We don't build houses. We plant communities that outlive us.",
+};
+
 export const testimonials = [
   { name: "Ravi & Kavitha Menon", role: "Bought a 3200 sq.ft plot", quote: "Quantumrise Infra feels less like a project and more like a private forest we happen to own an address in. Every detail — from the way the trees frame the entrance to the finish of the kerbstones — is considered.", photo: t1 },
   { name: "Dr. Meera Ranganath", role: "Consultant, Manipal Hospitals", quote: "We looked at every marquee project in North Bangalore. Nothing else made land feel this luxurious. The clubhouse alone would justify the address.", photo: t2 },

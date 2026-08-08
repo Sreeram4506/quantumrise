@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { Eyebrow, MagneticButton, RevealText, SectionHeading } from "@/components/site";
 import interior from "@/assets/interior.jpg";
+import { managingDirector } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -46,6 +48,43 @@ function About() {
             </div>
           </div>
           <img src={interior} alt="" loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover" />
+        </div>
+      </section>
+
+      <section className="container-lux py-28 md:py-40">
+        <div className="grid gap-16 md:grid-cols-[1fr_1.4fr] md:items-center">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative overflow-hidden rounded-3xl bg-primary/5"
+            >
+              <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
+                <div className="flex h-28 w-28 items-center justify-center rounded-full bg-secondary/20 font-display text-5xl text-secondary">
+                  VV
+                </div>
+                <div className="text-center">
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Photo coming soon</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          <div>
+            <SectionHeading
+              eyebrow="Leadership"
+              title={<>The man behind<br /><em className="italic text-secondary">the vision.</em></>}
+            />
+            <div className="mt-8">
+              <h3 className="font-display text-3xl text-primary md:text-4xl">{managingDirector.name}</h3>
+              <div className="mt-2 text-xs uppercase tracking-[0.3em] text-secondary">{managingDirector.role}</div>
+              <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">{managingDirector.bio}</p>
+              <blockquote className="mt-8 border-l-2 border-secondary pl-6 font-display text-xl leading-snug text-primary md:text-2xl">
+                &ldquo;{managingDirector.quote}&rdquo;
+              </blockquote>
+            </div>
+          </div>
         </div>
       </section>
     </>
