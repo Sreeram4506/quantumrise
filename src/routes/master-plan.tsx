@@ -10,7 +10,7 @@ export const Route = createFileRoute("/master-plan")({
       {
         name: "description",
         content:
-          "Explore the Green Gardens master plan with plotted banks, 9m roads, the clubhouse edge and a secure arrival sequence.",
+          "Explore the Green Gardens master plan with a left plot arm, a central spine of 24 villa plots, 9m roads, and a clubhouse edge.",
       },
       { property: "og:title", content: "Green Gardens Master Plan" },
     ],

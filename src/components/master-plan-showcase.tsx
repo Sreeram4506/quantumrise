@@ -4,9 +4,9 @@ import { Eyebrow, MagneticButton, RevealText, SectionHeading } from "@/component
 
 type LayerId = "all" | "arrival" | "clubhouse" | "plots" | "roads";
 
-const plotRowsLeft = ["25", "26", "26", "27", "28", "29", "30", "31", "32", "33", "34*"];
-const plotRowsCenterLeft = ["24*", "23", "22", "22", "21", "20", "19", "17", "18", "15", "15", "14", "13*"];
-const plotRowsCenterRight = ["1*", "2", "3", "4", "5", "5", "6", "7", "8", "9", "10", "11", "12*"];
+const plotRowsLeft = ["25", "26", "27", "28", "29", "30", "31", "32", "33", "34*"];
+const plotRowsCenterLeft = ["24*", "23", "22", "21", "20", "19", "18", "17", "16", "15", "14", "13*"];
+const plotRowsCenterRight = ["1*", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12*"];
 
 const layers: Array<{
   id: LayerId;
@@ -26,7 +26,7 @@ const layers: Array<{
   {
     id: "plots",
     title: "Plot Banks",
-    body: "Two long plot bands hold the community together with a calm, efficient footprint.",
+    body: "A discrete left plot arm and a central spine of villa plots hold the community together with a calm, efficient footprint.",
   },
   {
     id: "roads",
@@ -65,8 +65,8 @@ export function MasterPlanShowcase({
           with the land doing the talking.
         </RevealText>
         <p className="mt-6 max-w-2xl text-muted-foreground md:text-lg">
-        Green Gardens is laid out as a calm plotted estate: two broad internal roads, a protected clubhouse edge,
-        and long banks of villa plots tucked into a green frame.
+        Green Gardens is laid out as a calm plotted estate: a discrete left plot arm, a central spine of 24 villa plots,
+        and two 9m roads that keep movement clear while preserving quiet.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <MagneticButton variant="gold" onClick={onPrimaryAction}>
@@ -118,7 +118,7 @@ export function MasterPlanShowcase({
               </div>
               <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
                 {selected === "all"
-                  ? "The full layout reads as one composed estate with a formal arrival, long plot bands and a central social anchor."
+                  ? "The full layout reads as one composed estate with a formal arrival, a left-side plot arm, long plot banks and a central social anchor."
                   : selectedLayer.body}
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
@@ -233,65 +233,84 @@ function MasterPlanDiagram({ selected }: { selected: LayerId }) {
         </defs>
 
         <rect x="0" y="0" width="1200" height="1500" fill="url(#sky)" />
-        <rect x="28" y="28" width="1144" height="1444" rx="30" fill="url(#grass)" opacity="0.95" />
+        <polygon
+          points="150,38 1140,38 1140,1460 240,1460"
+          fill="url(#grass)"
+          opacity="0.95"
+        />
+        <path
+          d="M150,38 L1140,38 L1140,1460 L240,1460 Z"
+          fill="none"
+          stroke="rgba(255,255,255,0.18)"
+          strokeWidth="8"
+          strokeLinejoin="round"
+        />
 
         {edgeTrees.map((i) => (
           <g key={`tree-top-${i}`}>
-            <circle cx={70 + i * 62} cy={74} r="18" fill="#375321" />
-            <circle cx={82 + i * 62} cy={58} r="14" fill="#496c2c" />
-            <circle cx={60 + i * 62} cy={62} r="12" fill="#28401c" />
+            <circle cx={170 + i * 50} cy={74} r="18" fill="#375321" />
+            <circle cx={182 + i * 50} cy={58} r="14" fill="#496c2c" />
+            <circle cx={160 + i * 50} cy={62} r="12" fill="#28401c" />
           </g>
         ))}
 
         {edgeTrees.map((i) => (
           <g key={`tree-bottom-${i}`}>
-            <circle cx={70 + i * 62} cy={1432} r="18" fill="#375321" />
-            <circle cx={82 + i * 62} cy={1418} r="14" fill="#496c2c" />
-            <circle cx={60 + i * 62} cy={1422} r="12" fill="#28401c" />
+            <circle cx={170 + i * 50} cy={1432} r="18" fill="#375321" />
+            <circle cx={182 + i * 50} cy={1418} r="14" fill="#496c2c" />
+            <circle cx={160 + i * 50} cy={1422} r="12" fill="#28401c" />
           </g>
         ))}
 
-        <rect x="76" y="148" width="220" height="186" rx="10" fill="#cbb78b" filter="url(#softShadow)" />
-        <rect x="86" y="158" width="200" height="166" rx="8" fill="#f4f0df" opacity="0.12" />
-        <text x="186" y="250" textAnchor="middle" fill="#f7f0d2" fontSize="28" fontWeight="600" letterSpacing="2">
+        <rect x="150" y="148" width="220" height="186" rx="10" fill="#cbb78b" filter="url(#softShadow)" />
+        <rect x="160" y="158" width="200" height="166" rx="8" fill="#f4f0df" opacity="0.12" />
+        <text x="260" y="250" textAnchor="middle" fill="#f7f0d2" fontSize="28" fontWeight="600" letterSpacing="2">
           CLUBHOUSE
         </text>
-        <text x="186" y="286" textAnchor="middle" fill="#f7f0d2" fontSize="14" letterSpacing="4">
+        <text x="260" y="286" textAnchor="middle" fill="#f7f0d2" fontSize="14" letterSpacing="4">
           SOCIAL ANCHOR
         </text>
 
-        <rect x="308" y="0" width="112" height="1500" fill="url(#road)" opacity="0.95" />
-        <rect x="704" y="0" width="112" height="1500" fill="url(#road)" opacity="0.95" />
-        <rect x="420" y="0" width="284" height="1500" fill="rgba(0,0,0,0)" />
+        <rect x="360" y="0" width="112" height="1500" fill="url(#road)" opacity="0.95" />
+        <rect x="760" y="0" width="112" height="1500" fill="url(#road)" opacity="0.95" />
+        <rect x="480" y="0" width="284" height="1500" fill="rgba(0,0,0,0)" />
 
-        <rect x="0" y="1220" width="1200" height="120" fill="rgba(16, 29, 14, 0.35)" />
-        <rect x="0" y="1308" width="1200" height="40" fill="rgba(31, 45, 21, 0.55)" />
-        <rect x="82" y="1348" width="1036" height="48" rx="6" fill="#4b4f47" />
-        <rect x="510" y="1288" width="180" height="92" rx="8" fill="#d6c28a" filter="url(#softShadow)" />
+        <rect x="240" y="1220" width="900" height="120" fill="rgba(16, 29, 14, 0.35)" />
+        <rect x="240" y="1308" width="900" height="40" fill="rgba(31, 45, 21, 0.55)" />
+        <rect x="240" y="1348" width="900" height="48" rx="6" fill="#4b4f47" />
+        <rect x="520" y="1288" width="180" height="92" rx="8" fill="#d6c28a" filter="url(#softShadow)" />
         <text x="600" y="1344" textAnchor="middle" fill="#3a321a" fontSize="24" fontWeight="700" letterSpacing="4">
           ENTRY GATE
         </text>
 
-        <text x="364" y="770" transform="rotate(-90 364 770)" fill="#e7dfc9" fontSize="26" fontWeight="700" letterSpacing="3">
+        <text x="410" y="770" transform="rotate(-90 410 770)" fill="#e7dfc9" fontSize="26" fontWeight="700" letterSpacing="3">
           9M WIDE ROAD
         </text>
-        <text x="760" y="770" transform="rotate(-90 760 770)" fill="#e7dfc9" fontSize="26" fontWeight="700" letterSpacing="3">
+        <text x="810" y="770" transform="rotate(-90 810 770)" fill="#e7dfc9" fontSize="26" fontWeight="700" letterSpacing="3">
           9M WIDE ROAD
         </text>
 
         <g opacity={selected === "roads" || selected === "all" ? 0.9 : 0.45}>
-          <rect x="308" y="0" width="4" height="1500" fill={roadFill} opacity="0.8" />
-          <rect x="816" y="0" width="4" height="1500" fill={roadFill} opacity="0.8" />
+          <rect x="360" y="0" width="4" height="1500" fill={roadFill} opacity="0.8" />
+          <rect x="872" y="0" width="4" height="1500" fill={roadFill} opacity="0.8" />
         </g>
 
         <g>
           {plotRowsLeft.map((label, index) => {
             const y = 360 + index * 85;
             const h = index === plotRowsLeft.length - 1 ? 94 : 84;
+            const xStart = 150 + ((y - 38) / 1422) * 90;
+            const xEnd = 150 + ((y + h - 38) / 1422) * 90;
+            const width = 180;
             return (
               <g key={`left-${label}-${index}`} opacity={selected === "plots" || selected === "all" ? 1 : 0.65}>
-                <rect x="70" y={y} width="220" height={h} fill={plotFill} stroke="rgba(255,255,255,0.28)" strokeWidth="2" />
-                <text x="180" y={y + h / 2 + 10} textAnchor="middle" fill="#f6f1dd" fontSize="26" fontWeight="700">
+                <polygon
+                  points={`${xStart},${y} ${xStart + width},${y} ${xEnd + width},${y + h} ${xEnd},${y + h}`}
+                  fill={plotFill}
+                  stroke="rgba(255,255,255,0.28)"
+                  strokeWidth="2"
+                />
+                <text x={xStart + width / 2 + 10} y={y + h / 2 + 10} textAnchor="middle" fill="#f6f1dd" fontSize="26" fontWeight="700">
                   {label}
                 </text>
               </g>

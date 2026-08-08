@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Eyebrow, MagneticButton, Parallax, RevealText, SectionHeading } from "@/components/site";
 import { EnquiryModal } from "@/components/enquiry-modal";
@@ -61,6 +62,41 @@ function Project() {
       </section>
 
       <section className="container-lux py-20 md:py-28">
+        <div className="mb-16 text-center">
+          <Eyebrow className="justify-center">Announcement</Eyebrow>
+          <RevealText as="h2" className="mx-auto max-w-3xl font-display text-4xl leading-[1.1] text-primary md:text-6xl">
+            Something big is happening.
+          </RevealText>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+          >
+            Stay tuned for a major new announcement from Quantumrise Infra.
+          </motion.p>
+        </div>
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="relative overflow-hidden rounded-3xl bg-primary/5"
+          >
+            <div className="flex aspect-[16/7] w-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-secondary/20 text-secondary">
+                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="text-4xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M464 448H48c-8.8 0-16-7.2-16-16V80c0-8.8 7.2-16 16-16h416c8.8 0 16 7.2 16 16v352c0 8.8-7.2 16-16 16zM96 288l64-64 96 96 64-64 96 96V128H96v160z"></path>
+                </svg>
+              </div>
+              <div className="text-center">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Image coming soon</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <SectionHeading
             eyebrow="Walkthrough"
