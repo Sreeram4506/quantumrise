@@ -85,16 +85,14 @@ function Project() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="relative overflow-hidden rounded-3xl bg-primary/5"
           >
-            <div className="flex aspect-[16/7] w-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
-              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-secondary/20 text-secondary">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="text-4xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M464 448H48c-8.8 0-16-7.2-16-16V80c0-8.8 7.2-16 16-16h416c8.8 0 16 7.2 16 16v352c0 8.8-7.2 16-16 16zM96 288l64-64 96 96 64-64 96 96V128H96v160z"></path>
-                </svg>
-              </div>
-              <div className="text-center">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Image coming soon</div>
-              </div>
+            <div className="px-6 pt-6 text-center text-sm uppercase tracking-[0.28em] text-muted-foreground md:text-[13px]">
+              Concept of vintage living
             </div>
+            <img
+              src="/pexels-souranshi-fashion-and-lifestyle-magazine-2959920-4497544.jpg"
+              alt="Luxury residential property visual"
+              className="aspect-[16/7] w-full object-cover"
+            />
           </motion.div>
         </div>
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
@@ -189,12 +187,12 @@ function Project() {
         <div className="grid gap-8 lg:grid-cols-[1.35fr_1fr] lg:items-start">
           <div className="self-start overflow-hidden rounded-3xl border border-border bg-primary/5">
             <iframe
-              title="Site No:17/1, Neelanka Agrahara, Malur, Kolar Dt, Karnataka-563130 map"
+              title="Quantumrise Infra location map"
               width="100%"
               height="560"
               loading="lazy"
               className="block h-[420px] w-full md:h-[560px]"
-              src="https://www.google.com/maps?q=Site+No%3A17%2F1%2C+Neelanka+Agrahara%2C+Malur%2C+Kolar+Dt%2C+Karnataka-563130&output=embed"
+              src="https://www.google.com/maps?q=XXW5%2B3CW,+Neelakanta+Agrahara,+Malur,+Karnataka+563130&output=embed"
             />
           </div>
           <div className="grid content-start gap-3">
