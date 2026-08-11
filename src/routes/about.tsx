@@ -61,14 +61,12 @@ function About() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="relative overflow-hidden rounded-3xl bg-primary/5"
             >
-              <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
-                <div className="flex h-28 w-28 items-center justify-center rounded-full bg-secondary/20 font-display text-5xl text-secondary">
-                  VV
-                </div>
-                <div className="text-center">
-                  <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Photo coming soon</div>
-                </div>
-              </div>
+              <img
+                src={managingDirector.photo}
+                alt={managingDirector.name}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover object-center"
+              />
             </motion.div>
           </div>
           <div>

@@ -78,7 +78,7 @@ export const galleryImages = [
 export const managingDirector = {
   name: "Vishnu Vardhan Boilla",
   role: "Managing Director",
-  photo: "/md-placeholder.jpg",
+  photo: "/IMG_9441.PNG",
   bio: "Leading Quantumrise Infra with a vision for considered, low-density plotted communities across South India — land developed with restraint, honesty and a view to the next generation.",
   quote: "We don't build houses. We plant communities that outlive us.",
 };
